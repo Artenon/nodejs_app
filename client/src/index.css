@@ -1,0 +1,165 @@
+/* LOGIN */
+
+.login {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #23242a;
+  font-family: consolas;
+  color: #444;
+}
+
+.login .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(#c2c2c2, #8f8f8f);
+  border-radius: 8px;
+  padding: 50px;
+  max-width: 400px;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3),
+    0px 0px 30px rgba(255, 255, 255, 0.3),
+    0px 0px 80px rgba(255, 255, 255, 0.3);
+}
+
+.login__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login__header .logo {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+  color: #d4d4d4;
+  background-color: #444;
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.login__header h3 {
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.login .inputBox {
+  position: relative;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.login .inputBox input {
+  position: relative;
+  width: 100%;
+  padding: 10px 10px 5px 25px;
+  font-size: 1.25em;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  border-bottom: 3px solid #444;
+  outline: none;
+  transition: border-bottom .3s;
+}
+
+.login .inputBox.not-equal input {
+  border-bottom: 3px solid #7d0b0b;
+}
+
+.login .inputBox.equal input {
+  border-bottom: 3px solid #0b7d20;
+}
+
+.login .inputBox.empty input {
+  border-bottom: 3px solid #444;
+}
+
+.login .inputBox .icon {
+  position: absolute;
+  left: 0;
+  top: 15px;
+  font-size: 1.25em;
+}
+
+.login .inputBox label {
+  position: absolute;
+  left: 0;
+  font-size: 1.25em;
+  padding: 10px 10px 5px 25px;
+  pointer-events: none;
+  transition: .3s;
+}
+
+.login .inputBox input:focus ~ label,
+.login .inputBox input:valid ~ label {
+  transform: translateY(-20px);
+  font-size: 1em;
+  color: #d4d4d4;
+  border-radius: 5px;
+  background-color: #444;
+  padding: 0 5px;
+}
+
+.login .inputBox.equal input:focus ~ label,
+.login .inputBox.equal input:valid ~ label {
+  background-color: #0b7d20;
+}
+
+.login .inputBox.not-equal input:focus ~ label,
+.login .inputBox.not-equal input:valid ~ label {
+  background-color: #7d0b0b;
+}
+
+.login .inputBox.empty input:focus ~ label,
+.login .inputBox.empty input:valid ~ label {
+  background-color: #444;
+}
+
+.login .inputBox .hint {
+  font-weight: bold;
+  color: #7d0b0b;
+}
+
+.login__button {
+  width: 100%;
+  color: #d4d4d4;
+  background-color: #444;
+  border: none;
+  font-size: 1.25em;
+  margin-top: 30px;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: inset -5px -5px 15px rgba(0, 0, 0, 0.2),
+    inset 5px 5px 15px rgba(255, 255, 255, 0.1);
+  transition: .2s;
+}
+
+.login__button:hover {
+  border-radius: 20px;
+}
+
+.login__button:active {
+  box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.2),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1);
+}
+
+.login .signup_link {
+  color: #444;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: .2s;
+  font-weight: bold;
+}
+
+.login .signup_link:hover {
+  text-decoration: underline;
+}
+
+.login .signup_link svg {
+  margin-right: 5px;
+}
